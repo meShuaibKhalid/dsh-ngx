@@ -1,0 +1,8 @@
+<nb-list>
+  <nb-list-item class="item" *ngFor="let item of predictionData">
+    <span [class]="item.headerClass ? 'grid-title' : ''" *ngIf="item.header">{{ item.header }}</span>
+    <span *ngIf="item.highlightheader"><b>{{ item.highlightheader }}</b></span>
+    <span *ngIf="item.value">{{ item.value }}</span>
+    <span *ngIf="item.highlightValue"><b>{{ item.highlightValue }}</b></span>
+  </nb-list-item>
+</nb-list>

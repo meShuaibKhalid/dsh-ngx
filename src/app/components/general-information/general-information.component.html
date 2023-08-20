@@ -1,0 +1,15 @@
+<div class="d-flex flex-column justify-content-center align-items-center browse-image-wrapper">
+    <h2 class="image-title">Upload files</h2>
+    <div class="d-flex flex-column align-items-center upload-wrapper">
+      <img src="assets/images/upload-icon.png" width="70">
+    <input type="file" (change)="onFileSelected($event)" id="upload" />
+
+   <span><b>Click to upload </b> or drag and drop</span>
+   
+   <button (click)="onUpload()"><i class="fa fa-search"></i>Browse File</button>
+    <div *ngIf="uploadSuccess">
+      <p>File uploaded successfully!</p>
+    </div>
+  </div>
+  </div>
+

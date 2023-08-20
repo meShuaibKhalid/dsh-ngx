@@ -1,0 +1,86 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  .toggle-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    @include nb-rtl(right, auto);
+    @include nb-rtl(left, 1.25rem);
+    cursor: pointer;
+  }
+}
+
+:host ::ng-deep{
+  nb-card{
+      border: 0;
+  }
+  .first-row-grid nb-list-item:last-child{
+    border-bottom: 2px solid rgb(95, 128, 238);
+  }
+  .future-prediction-grid nb-list-item{
+    padding: 6px;
+    border-bottom: 0;
+  } 
+  .future-prediction-grid nb-reveal-card{
+    margin-bottom: 0;
+  }
+  .future-prediction-grid .col-md-6, .future-prediction-grid .col-6{
+    border-left: 1px solid #edf1f7;
+  }
+  .future-prediction-grid .col-md-6:first-child{
+    border-left: 0;
+  }
+  .future-prediction-grid nb-list-item:first-child span:last-child{
+    color: #515EDF;
+  }
+  nb-list-item{
+    padding: 10px 15px;
+  }
+}
+
+.future-prediction-grid{
+  padding-top: 15px;
+}
+
+.grid-title{
+    color: #515EDF;
+}
+
+.header-content{
+  @media screen and (max-width:768px) {
+    justify-content: center !important;
+  }
+}
+.header-buttons{
+  button{
+    display: flex;
+    align-items: center;
+    background: #515EDF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px;
+    border-radius: 8px;
+    border: solid #515EDF;
+    margin-left: 15px;
+
+    img{
+      margin: 0 10px;
+    }
+  }
+}
+
+.declaimer{
+  padding: 15px;
+  .title{
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .caption{
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+  }
+}

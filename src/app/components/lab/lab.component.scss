@@ -1,0 +1,58 @@
+.content-wrapper{
+    width: 100%;
+    height: calc(100vh - 162px);
+    overflow: auto;
+    padding: 30px 10px;
+    background: #fff;
+
+    @media screen and (max-width: 576px){
+        justify-content: flex-start !important;
+    }
+
+    .page-title{
+        color: #515BDD;
+        font-weight: 700;
+        font-size: 28px;
+        margin: 5px;
+    }
+    .page-caption{
+        color: #424242;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .boxes-wrapper{
+        margin: 20px;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .box{
+            border: 2px solid #515BDD;
+            border-radius: 8px;
+            min-height: 200px;
+            min-width: 200px;
+
+            .box-title{
+                font-size: 14px;
+                font-weight: 700;
+                color: #000;
+                display: inline-block;
+                margin: 10px 0;
+            }
+            .checkbox-img{
+                position: relative;
+            }
+            .checkbox-img::before{
+                content: "";
+                display: block;
+                right: 14px;
+                top: 9px;
+                position: absolute;
+                width: 8px;
+                height: 14px;
+                border: solid #515BDD;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

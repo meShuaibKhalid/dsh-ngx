@@ -1,0 +1,131 @@
+<div>
+  <div class="d-flex justify-content-between align-items-center flex-wrap my-3 header-content">
+    <h4 class="grid-title my-2">Prediction</h4>
+
+    <div class="d-flex header-buttons my-1">
+      <button type="button">
+        <img src="assets/images/csv-file.png" alt="" width="20">
+        Export as CSV
+        <img src="assets/images/export.png" alt="" width="15">
+      </button>
+      <button type="button">
+        <img src="assets/images/folder.png" alt="" width="20">
+        Export as JSON
+        <img src="assets/images/export.png" alt="" width="15">
+      </button>
+    </div>
+  </div>
+
+  <div class="row first-row-grid">
+    <div class="col-12 col-md-6">
+      <nb-reveal-card [showToggleButton]="false">
+        <nb-card-front>
+          <nb-card>
+            <ngx-traffic-front-card [predictionData]="predictionData"></ngx-traffic-front-card>
+          </nb-card>
+        </nb-card-front>
+      </nb-reveal-card>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <nb-reveal-card [showToggleButton]="false">
+        <nb-card-front>
+          <nb-card>
+            <ngx-traffic-front-card [predictionData]="medicalHistoryInfo"></ngx-traffic-front-card>
+          </nb-card>
+        </nb-card-front>
+      </nb-reveal-card>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="d-flex align-items-center">
+    <h5 class="grid-title mr-3 my-0">Future detection</h5>
+    <p class="m-0">Total features <span class="grid-title m-0">126</span></p>
+  </div>
+  <div class="row flex-wrap future-prediction-grid">
+    <div class="d-flex col-12 col-lg-6 p-0">
+      <div class="col-6">
+        <nb-reveal-card [showToggleButton]="false">
+          <nb-card-front>
+            <nb-card>
+              <ngx-traffic-front-card [predictionData]="impairments"></ngx-traffic-front-card>
+            </nb-card>
+          </nb-card-front>
+        </nb-reveal-card>
+      </div>
+
+      <div class="col-6">
+        <nb-reveal-card [showToggleButton]="false">
+          <nb-card-front>
+            <nb-card>
+              <ngx-traffic-front-card [predictionData]="medication"></ngx-traffic-front-card>
+            </nb-card>
+          </nb-card-front>
+        </nb-reveal-card>
+      </div>
+    </div>
+
+    <div class="d-flex col-12 col-lg-6 p-0">
+      <div class="col-6">
+        <nb-reveal-card [showToggleButton]="false">
+          <nb-card-front>
+            <nb-card>
+              <ngx-traffic-front-card [predictionData]="labs"></ngx-traffic-front-card>
+            </nb-card>
+          </nb-card-front>
+        </nb-reveal-card>
+      </div>
+
+      <div class="col-6">
+        <nb-reveal-card [showToggleButton]="false">
+          <nb-card-front>
+            <nb-card>
+              <ngx-traffic-front-card [predictionData]="behavioral"></ngx-traffic-front-card>
+            </nb-card>
+          </nb-card-front>
+        </nb-reveal-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="row" (click)="test(chartOptions)">
+  aaa
+  <div class="col-12 col-md-6" id="chart" *ngIf="chartOptions">
+    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"></apx-chart>
+  </div>
+  </div> 
+
+<div class="row">
+  <div class="col-12 col-md-6">
+    <nb-reveal-card [showToggleButton]="false">
+      <nb-card-front>
+        <nb-card>
+          <ngx-traffic-front-card [predictionData]="footerData"></ngx-traffic-front-card>
+        </nb-card>
+      </nb-card-front>
+    </nb-reveal-card>
+  </div>
+
+  <div class="col-12 col-md-6">
+    <nb-reveal-card [showToggleButton]="false">
+      <nb-card-front>
+        <nb-card>
+          <ngx-traffic-front-card [predictionData]="footerData"></ngx-traffic-front-card>
+        </nb-card>
+      </nb-card-front>
+    </nb-reveal-card>
+  </div>
+
+  <div class="declaimer">
+    <h5 class="title"><b>Disclaimer</b></h5>
+    <p class="caption">
+      Note - This is a sample report for demo purposes only. It may not be utilized for any purpose, relied upon, or
+      shared with any third party, in any form or way.
+    </p>
+  </div>
+</div>
